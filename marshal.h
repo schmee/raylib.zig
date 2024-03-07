@@ -1662,10 +1662,10 @@ void mrlScalef(float x, float y, float z);
 // Multiply the current matrix by another matrix
 void mrlMultMatrixf(const float * matf);
 
-// 
+//
 void mrlFrustum(double left, double right, double bottom, double top, double znear, double zfar);
 
-// 
+//
 void mrlOrtho(double left, double right, double bottom, double top, double znear, double zfar);
 
 // Set the viewport area
@@ -1764,7 +1764,7 @@ void mrlActiveDrawBuffers(int count);
 // Blit active framebuffer to main framebuffer
 void mrlBlitFramebuffer(int srcX, int srcY, int srcWidth, int srcHeight, int dstX, int dstY, int dstWidth, int dstHeight, int bufferMask);
 
-// Bind framebuffer (FBO) 
+// Bind framebuffer (FBO)
 void mrlBindFramebuffer(unsigned int target, unsigned int framebuffer);
 
 // Enable color blending
@@ -1981,7 +1981,7 @@ void * mrlReadTexturePixels(unsigned int id, int width, int height, int format);
 unsigned char * mrlReadScreenPixels(int width, int height);
 
 // Load an empty framebuffer
-unsigned int mrlLoadFramebuffer(int width, int height);
+unsigned int mrlLoadFramebuffer();
 
 // Attach texture/renderbuffer to a framebuffer
 void mrlFramebufferAttach(unsigned int fboId, unsigned int texId, int attachType, int texType, int mipLevel);
@@ -2061,10 +2061,10 @@ void mrlGetMatrixProjection(Matrix *out);
 // Get internal accumulated transform matrix
 void mrlGetMatrixTransform(Matrix *out);
 
-// 
+//
 void mrlGetMatrixProjectionStereo(Matrix *out, int eye);
 
-// 
+//
 void mrlGetMatrixViewOffsetStereo(Matrix *out, int eye);
 
 // Set a custom projection matrix (replaces internal projection matrix)
@@ -2085,345 +2085,345 @@ void mrlLoadDrawCube(void);
 // Load and draw a quad
 void mrlLoadDrawQuad(void);
 
-// 
+//
 float mClamp(float value, float min, float max);
 
-// 
+//
 float mLerp(float start, float end, float amount);
 
-// 
+//
 float mNormalize(float value, float start, float end);
 
-// 
+//
 float mRemap(float value, float inputStart, float inputEnd, float outputStart, float outputEnd);
 
-// 
+//
 float mWrap(float value, float min, float max);
 
-// 
+//
 int mFloatEquals(float x, float y);
 
-// 
+//
 void mVector2Zero(Vector2 *out);
 
-// 
+//
 void mVector2One(Vector2 *out);
 
-// 
+//
 void mVector2Add(Vector2 *out, Vector2 *v1, Vector2 *v2);
 
-// 
+//
 void mVector2AddValue(Vector2 *out, Vector2 *v, float add);
 
-// 
+//
 void mVector2Subtract(Vector2 *out, Vector2 *v1, Vector2 *v2);
 
-// 
+//
 void mVector2SubtractValue(Vector2 *out, Vector2 *v, float sub);
 
-// 
+//
 float mVector2Length(Vector2 *v);
 
-// 
+//
 float mVector2LengthSqr(Vector2 *v);
 
-// 
+//
 float mVector2DotProduct(Vector2 *v1, Vector2 *v2);
 
-// 
+//
 float mVector2Distance(Vector2 *v1, Vector2 *v2);
 
-// 
+//
 float mVector2DistanceSqr(Vector2 *v1, Vector2 *v2);
 
-// 
+//
 float mVector2Angle(Vector2 *v1, Vector2 *v2);
 
-// 
+//
 float mVector2LineAngle(Vector2 *start, Vector2 *end);
 
-// 
+//
 void mVector2Scale(Vector2 *out, Vector2 *v, float scale);
 
-// 
+//
 void mVector2Multiply(Vector2 *out, Vector2 *v1, Vector2 *v2);
 
-// 
+//
 void mVector2Negate(Vector2 *out, Vector2 *v);
 
-// 
+//
 void mVector2Divide(Vector2 *out, Vector2 *v1, Vector2 *v2);
 
-// 
+//
 void mVector2Normalize(Vector2 *out, Vector2 *v);
 
-// 
+//
 void mVector2Transform(Vector2 *out, Vector2 *v, Matrix *mat);
 
-// 
+//
 void mVector2Lerp(Vector2 *out, Vector2 *v1, Vector2 *v2, float amount);
 
-// 
+//
 void mVector2Reflect(Vector2 *out, Vector2 *v, Vector2 *normal);
 
-// 
+//
 void mVector2Rotate(Vector2 *out, Vector2 *v, float angle);
 
-// 
+//
 void mVector2MoveTowards(Vector2 *out, Vector2 *v, Vector2 *target, float maxDistance);
 
-// 
+//
 void mVector2Invert(Vector2 *out, Vector2 *v);
 
-// 
+//
 void mVector2Clamp(Vector2 *out, Vector2 *v, Vector2 *min, Vector2 *max);
 
-// 
+//
 void mVector2ClampValue(Vector2 *out, Vector2 *v, float min, float max);
 
-// 
+//
 int mVector2Equals(Vector2 *p, Vector2 *q);
 
-// 
+//
 void mVector3Zero(Vector3 *out);
 
-// 
+//
 void mVector3One(Vector3 *out);
 
-// 
+//
 void mVector3Add(Vector3 *out, Vector3 *v1, Vector3 *v2);
 
-// 
+//
 void mVector3AddValue(Vector3 *out, Vector3 *v, float add);
 
-// 
+//
 void mVector3Subtract(Vector3 *out, Vector3 *v1, Vector3 *v2);
 
-// 
+//
 void mVector3SubtractValue(Vector3 *out, Vector3 *v, float sub);
 
-// 
+//
 void mVector3Scale(Vector3 *out, Vector3 *v, float scalar);
 
-// 
+//
 void mVector3Multiply(Vector3 *out, Vector3 *v1, Vector3 *v2);
 
-// 
+//
 void mVector3CrossProduct(Vector3 *out, Vector3 *v1, Vector3 *v2);
 
-// 
+//
 void mVector3Perpendicular(Vector3 *out, Vector3 *v);
 
-// 
+//
 float mVector3Length(const Vector3 *v);
 
-// 
+//
 float mVector3LengthSqr(const Vector3 *v);
 
-// 
+//
 float mVector3DotProduct(Vector3 *v1, Vector3 *v2);
 
-// 
+//
 float mVector3Distance(Vector3 *v1, Vector3 *v2);
 
-// 
+//
 float mVector3DistanceSqr(Vector3 *v1, Vector3 *v2);
 
-// 
+//
 float mVector3Angle(Vector3 *v1, Vector3 *v2);
 
-// 
+//
 void mVector3Negate(Vector3 *out, Vector3 *v);
 
-// 
+//
 void mVector3Divide(Vector3 *out, Vector3 *v1, Vector3 *v2);
 
-// 
+//
 void mVector3Normalize(Vector3 *out, Vector3 *v);
 
-// 
+//
 void mVector3Project(Vector3 *out, Vector3 *v1, Vector3 *v2);
 
-// 
+//
 void mVector3Reject(Vector3 *out, Vector3 *v1, Vector3 *v2);
 
-// 
+//
 void mVector3OrthoNormalize(Vector3 * v1, Vector3 * v2);
 
-// 
+//
 void mVector3Transform(Vector3 *out, Vector3 *v, Matrix *mat);
 
-// 
+//
 void mVector3RotateByQuaternion(Vector3 *out, Vector3 *v, Vector4 *q);
 
-// 
+//
 void mVector3RotateByAxisAngle(Vector3 *out, Vector3 *v, Vector3 *axis, float angle);
 
-// 
+//
 void mVector3Lerp(Vector3 *out, Vector3 *v1, Vector3 *v2, float amount);
 
-// 
+//
 void mVector3Reflect(Vector3 *out, Vector3 *v, Vector3 *normal);
 
-// 
+//
 void mVector3Min(Vector3 *out, Vector3 *v1, Vector3 *v2);
 
-// 
+//
 void mVector3Max(Vector3 *out, Vector3 *v1, Vector3 *v2);
 
-// 
+//
 void mVector3Barycenter(Vector3 *out, Vector3 *p, Vector3 *a, Vector3 *b, Vector3 *c);
 
-// 
+//
 void mVector3Unproject(Vector3 *out, Vector3 *source, Matrix *projection, Matrix *view);
 
-// 
+//
 void mVector3ToFloatV(float3 *out, Vector3 *v);
 
-// 
+//
 void mVector3Invert(Vector3 *out, Vector3 *v);
 
-// 
+//
 void mVector3Clamp(Vector3 *out, Vector3 *v, Vector3 *min, Vector3 *max);
 
-// 
+//
 void mVector3ClampValue(Vector3 *out, Vector3 *v, float min, float max);
 
-// 
+//
 int mVector3Equals(Vector3 *p, Vector3 *q);
 
-// 
+//
 void mVector3Refract(Vector3 *out, Vector3 *v, Vector3 *n, float r);
 
-// 
+//
 float mMatrixDeterminant(Matrix *mat);
 
-// 
+//
 float mMatrixTrace(Matrix *mat);
 
-// 
+//
 void mMatrixTranspose(Matrix *out, Matrix *mat);
 
-// 
+//
 void mMatrixInvert(Matrix *out, Matrix *mat);
 
-// 
+//
 void mMatrixIdentity(Matrix *out);
 
-// 
+//
 void mMatrixAdd(Matrix *out, Matrix *left, Matrix *right);
 
-// 
+//
 void mMatrixSubtract(Matrix *out, Matrix *left, Matrix *right);
 
-// 
+//
 void mMatrixMultiply(Matrix *out, Matrix *left, Matrix *right);
 
-// 
+//
 void mMatrixTranslate(Matrix *out, float x, float y, float z);
 
-// 
+//
 void mMatrixRotate(Matrix *out, Vector3 *axis, float angle);
 
-// 
+//
 void mMatrixRotateX(Matrix *out, float angle);
 
-// 
+//
 void mMatrixRotateY(Matrix *out, float angle);
 
-// 
+//
 void mMatrixRotateZ(Matrix *out, float angle);
 
-// 
+//
 void mMatrixRotateXYZ(Matrix *out, Vector3 *angle);
 
-// 
+//
 void mMatrixRotateZYX(Matrix *out, Vector3 *angle);
 
-// 
+//
 void mMatrixScale(Matrix *out, float x, float y, float z);
 
-// 
+//
 void mMatrixFrustum(Matrix *out, double left, double right, double bottom, double top, double near, double far);
 
-// 
+//
 void mMatrixPerspective(Matrix *out, double fovY, double aspect, double nearPlane, double farPlane);
 
-// 
+//
 void mMatrixOrtho(Matrix *out, double left, double right, double bottom, double top, double nearPlane, double farPlane);
 
-// 
+//
 void mMatrixLookAt(Matrix *out, Vector3 *eye, Vector3 *target, Vector3 *up);
 
-// 
+//
 void mMatrixToFloatV(float16 *out, Matrix *mat);
 
-// 
+//
 void mQuaternionAdd(Vector4 *out, Vector4 *q1, Vector4 *q2);
 
-// 
+//
 void mQuaternionAddValue(Vector4 *out, Vector4 *q, float add);
 
-// 
+//
 void mQuaternionSubtract(Vector4 *out, Vector4 *q1, Vector4 *q2);
 
-// 
+//
 void mQuaternionSubtractValue(Vector4 *out, Vector4 *q, float sub);
 
-// 
+//
 void mQuaternionIdentity(Vector4 *out);
 
-// 
+//
 float mQuaternionLength(Vector4 *q);
 
-// 
+//
 void mQuaternionNormalize(Vector4 *out, Vector4 *q);
 
-// 
+//
 void mQuaternionInvert(Vector4 *out, Vector4 *q);
 
-// 
+//
 void mQuaternionMultiply(Vector4 *out, Vector4 *q1, Vector4 *q2);
 
-// 
+//
 void mQuaternionScale(Vector4 *out, Vector4 *q, float mul);
 
-// 
+//
 void mQuaternionDivide(Vector4 *out, Vector4 *q1, Vector4 *q2);
 
-// 
+//
 void mQuaternionLerp(Vector4 *out, Vector4 *q1, Vector4 *q2, float amount);
 
-// 
+//
 void mQuaternionNlerp(Vector4 *out, Vector4 *q1, Vector4 *q2, float amount);
 
-// 
+//
 void mQuaternionSlerp(Vector4 *out, Vector4 *q1, Vector4 *q2, float amount);
 
-// 
+//
 void mQuaternionFromVector3ToVector3(Vector4 *out, Vector3 *from, Vector3 *to);
 
-// 
+//
 void mQuaternionFromMatrix(Vector4 *out, Matrix *mat);
 
-// 
+//
 void mQuaternionToMatrix(Matrix *out, Vector4 *q);
 
-// 
+//
 void mQuaternionFromAxisAngle(Vector4 *out, Vector3 *axis, float angle);
 
-// 
+//
 void mQuaternionToAxisAngle(Vector4 *q, Vector3 * outAxis, float * outAngle);
 
-// 
+//
 void mQuaternionFromEuler(Vector4 *out, float pitch, float yaw, float roll);
 
-// 
+//
 void mQuaternionToEuler(Vector3 *out, Vector4 *q);
 
-// 
+//
 void mQuaternionTransform(Vector4 *out, Vector4 *q, Matrix *mat);
 
-// 
+//
 int mQuaternionEquals(Vector4 *p, Vector4 *q);
 

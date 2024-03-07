@@ -8543,14 +8543,8 @@ pub fn rlReadScreenPixels(
 }
 
 /// Load an empty framebuffer
-pub fn rlLoadFramebuffer(
-    width: i32,
-    height: i32,
-) u32 {
-    return raylib.mrlLoadFramebuffer(
-        width,
-        height,
-    );
+pub fn rlLoadFramebuffer() u32 {
+    return raylib.mrlLoadFramebuffer();
 }
 
 /// Attach texture/renderbuffer to a framebuffer
